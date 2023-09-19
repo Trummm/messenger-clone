@@ -10,7 +10,7 @@ import useOtherUser from '@/app/hooks/useOtherUser'
 import useActiveList from '@/app/hooks/useActiveList'
 
 import Avatar from '@/app/components/Avatar'
-// import AvatarGroup from '@/app/components/AvatarGroup'
+import AvatarGroup from '@/app/components/AvatarGroup'
 import ProfileDrawer from './ProfileDrawer'
 
 interface HeaderProps {
@@ -70,7 +70,11 @@ const Header: React.FC<HeaderProps> = ({ conversation }) => {
             <HiChevronLeft size={32} />
           </Link>
 
-          <Avatar user={otherUser} />
+          {conversation.isGroup ? (
+            <AvatarGroup users={conversation.users} />
+          ) : (
+            <Avatar user={otherUser} />
+          )}
 
           <div className='flex flex-col'>
             <div>{conversation.name || otherUser.name}</div>
