@@ -11,7 +11,7 @@ import useActiveList from '@/app/hooks/useActiveList'
 
 import Avatar from '@/app/components/Avatar'
 // import AvatarGroup from '@/app/components/AvatarGroup'
-// import ConfirmModal from './ConfirmModal'
+import ConfirmModal from './ConfirmModal'
 
 interface ProfileDrawerProps {
   isOpen: boolean
@@ -50,10 +50,10 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
 
   return (
     <>
-      {/* <ConfirmModal
+      <ConfirmModal
         isOpen={confirmOpen}
         onClose={() => setConfirmOpen(false)}
-      /> */}
+      />
       <Transition.Root show={isOpen} as={Fragment}>
         <Dialog as='div' className='relative z-50' onClose={onClose}>
           <Transition.Child
