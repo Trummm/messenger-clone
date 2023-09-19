@@ -11,7 +11,7 @@ import useActiveList from '@/app/hooks/useActiveList'
 
 import Avatar from '@/app/components/Avatar'
 // import AvatarGroup from '@/app/components/AvatarGroup'
-// import ProfileDrawer from './ProfileDrawer'
+import ProfileDrawer from './ProfileDrawer'
 
 interface HeaderProps {
   conversation: Conversation & {
@@ -35,11 +35,11 @@ const Header: React.FC<HeaderProps> = ({ conversation }) => {
 
   return (
     <>
-      {/* <ProfileDrawer
+      <ProfileDrawer
         data={conversation}
         isOpen={drawerOpen}
         onClose={() => setDrawerOpen(false)}
-      /> */}
+      />
       <div
         className='
         bg-white 
